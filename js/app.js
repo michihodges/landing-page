@@ -19,6 +19,8 @@ console.log("js working");
  * 
 */
 
+const navbar = document.querySelector("#navbar__list");
+const sections = document.querySelectorAll('section');
 
 /**
  * End Global Variables
