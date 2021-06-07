@@ -37,15 +37,15 @@ const sections = document.querySelectorAll('section'); // array of sections
 */
 
 // build the nav
-function buildNav() { // Function declaration
-    for (let i = 0; i < sections.length; i++) { // for loop itterates over the length of all sections
-        let navElement = document.createElement("li"); // Creates a new list element
+function buildNav() {
+    for (let i = 0; i < sections.length; i++) {
+        let navElement = document.createElement("li");
         navElement.classList.add("menu__link");
         // navElement.addEventListener("click", onNavElementCLick);
-        navbar.appendChild(navElement); // Adds new list element to the navbar
+        navbar.appendChild(navElement);
         let navSection = sections[i]; // Selects a section out of the sections array
         let navSelection = navSection.dataset.nav; // Identifies each data-nav attribute in each section with dataset.nav
-        console.log(navSelection); // Prints each data-nav attribute to the console
+        console.log(navSelection);
         navElement.textContent = navSelection; // Adds data-nav attribute to the nav
         // navElement.onclick = function (){
         //     navSection.scrollIntoView(); //// scrollTo (where? how to modify?)
