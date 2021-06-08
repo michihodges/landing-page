@@ -53,12 +53,12 @@ function buildNav() {
         // navElement.onclick = function (){
         //     console.log("Listening");
         // }
-        // navElement.addEventListener("click", () => {
-        //     navSection.scrollIntoView();
-        // })
-        // navElement.addEventListener("click", () => {
-        //     console.log("Listening")
-        // })
+        navElement.addEventListener("click", () => {
+            navSection.scrollIntoView();
+        })
+        navElement.addEventListener("click", () => {
+            console.log("Listening")
+        })
 
         //// how to use the function not inline and outside of scope?
     }
@@ -72,12 +72,12 @@ function buildNav() {
 //     console.log(this);
 //     window.scrollTo(0, 100);
 // }
-function scrollToClick() {
-    navbar.addEventListener('click', function (event) {
-        const clicked = document.querySelector('#' + event.target.dataset.nav)
-        clicked.scrollIntoView();
-    });
-};
+// function scrollToClick() {
+//     navbar.addEventListener('click', function (event) {
+//         const clicked = document.querySelector('#' + event.target.dataset.nav)
+//         clicked.scrollIntoView();
+//     });
+// };
 
 /**
  * End Main Functions
