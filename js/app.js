@@ -46,13 +46,8 @@ function buildNav() {
         let navSection = sections[i]; // Selects a section out of the sections array
         let navSelection = navSection.dataset.nav; // Identifies each data-nav attribute in each section with dataset.nav
         console.log(navSelection);
+
         navElement.textContent = navSelection; // Adds data-nav attribute to the nav
-        // navElement.onclick = function (){
-        //     navSection.scrollIntoView(); //// scrollTo (where? how to modify?)
-        // }
-        // navElement.onclick = function (){
-        //     console.log("Listening");
-        // }
         navElement.addEventListener("click", () => {
             navSection.scrollIntoView();
         })
