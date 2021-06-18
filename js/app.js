@@ -49,10 +49,9 @@ function buildNav() {
 
         navElement.textContent = navSelection; // Adds data-nav attribute to the nav
         navElement.addEventListener("click", () => {
-            navSection.scrollIntoView();
-        })
-        navElement.addEventListener("click", () => {
-            console.log("Listening")
+            // navSection.scrollIntoView();
+            window.scrollTo(0, 100);
+            console.log("Listening");
         })
 
         //// how to use the function not inline and outside of scope?
@@ -84,6 +83,6 @@ function buildNav() {
 buildNav(); // Calls function
 
 // Scroll to section on link click
-scrollToClick();
+// scrollToClick();
 
 // Set sections as active
