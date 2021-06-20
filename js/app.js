@@ -48,13 +48,7 @@ function buildNav() {
         console.log(navSelection);
 
         navElement.textContent = navSelection; // Adds data-nav attribute to the nav
-        navElement.addEventListener("click", () => {
-            // navSection.scrollIntoView();
-            window.scrollTo(0, 100);
-            console.log("Listening");
-        })
-
-        //// how to use the function not inline and outside of scope?
+        navElement.addEventListener("click", scrollToAnchor);
     }
 }
 
@@ -62,6 +56,14 @@ function buildNav() {
 
 
 // Scroll to anchor ID using scrollTO event
+function scrollToAnchor(event) {
+    window.scrollTo({
+        top: 100,
+        left: 100,
+        behaviour: 'smooth'
+    });
+    console.log("Frasier Crane is listening.");
+}
 // function onNavElementCLick(mouseEvent) {
 //     console.log(this);
 //     window.scrollTo(0, 100);
@@ -84,5 +86,6 @@ buildNav(); // Calls function
 
 // Scroll to section on link click
 // scrollToClick();
+// scrollToElement();
 
 // Set sections as active
