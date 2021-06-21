@@ -48,6 +48,7 @@ function buildNav() {
         console.log(navSelection);
 
         navElement.textContent = navSelection; // Adds data-nav attribute to the nav
+        navElement.dataset["section_id"] = sections[i].id;
         navElement.addEventListener("click", scrollToAnchor);
     }
 }
@@ -57,9 +58,11 @@ function buildNav() {
 
 // Scroll to anchor ID using scrollTO event
 function scrollToAnchor(event) {
+    event.preventDefault();
+    let section = document.querySelector(`#${event.target.dataset.section_id}`);
     window.scrollTo({
-        top: 100,
-        left: 100,
+        top: section.offsetTop,
+        left: section.offsetLeft,
         behaviour: 'smooth'
     });
     console.log("Frasier Crane is listening.");
