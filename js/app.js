@@ -53,7 +53,22 @@ function buildNav() {
 }
 
 // Add class 'active' to section when near top of viewport
+function onScrollListener() {
+    let maxHeight = 0;
+    let activeSection = sections[0];
+    sections.forEach((section) => {
+        section.classList.remove("your-active-class");
+        let rect = section.getBoundingClientRect();
+        let inside = Math.max(Math.min(rect.bottom,window.innerHeight) - Math.max(rect.top, 0), 0);
+        if (inside > maxHeight) {
+            maxHeight = inside;
+            activeSection = section;
+        }
+    })
+    activeSection.classList.add("your-active-class");
+}
 
+document.addEventListener("scroll", onScrollListener);
 
 // Scroll to anchor ID using scrollTO event
 function scrollToAnchor(event) {
@@ -62,9 +77,8 @@ function scrollToAnchor(event) {
     window.scrollTo({
         top: section.offsetTop,
         left: section.offsetLeft,
-        behaviour: 'smooth'
+        behavior: 'smooth'
     });
-    console.log("Frasier Crane is listening.");
 }
 
 /**
