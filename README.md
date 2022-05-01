@@ -1,4 +1,4 @@
-# landing_page
+# Landing Page
 A multi-section landing page with dynamic navigation.
 
 ## Features
