@@ -1,4 +1,3 @@
-console.log("js working");
 /**
  * 
  * Manipulating the DOM exercise.
