@@ -16,7 +16,7 @@ function buildNav() {
         navbar.appendChild(navElement);
         let navSection = sections[i]; // Selects a section out of the sections array
         let navSelection = navSection.dataset.nav; // Identifies each data-nav attribute in each section with dataset.nav
-        console.log(navSelection);
+        console.log("navSelection " + navSelection);
 
         navElement.textContent = navSelection; // Adds data-nav attribute to the nav
         navElement.dataset["section_id"] = sections[i].id;
