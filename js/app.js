@@ -4,12 +4,11 @@ const sections = document.querySelectorAll('section'); // array of sections
 
 // Helper Functions
 
-// Main Functions
-
-// Build Nav
+// MAIN FUNCTIONS
+// BUILD NAV
 function buildNav() {
     for (let i = 0; i < sections.length; i++) { // loops over length of array of sections
-        let navElement = document.createElement("li"); // creates a list element for each section counted
+        let navElement = document.createElement("li"); // creates a list element for each section itterated over
         navElement.classList.add("menu__link"); // adds a class to each list element
         navbar.appendChild(navElement); // adds list elements to the nav
 
@@ -52,7 +51,7 @@ function scrollToAnchor(event) {
     });
 }
 
-// Events
+// EVENTS
 
 // Build Menu
 buildNav(); // Calls function
