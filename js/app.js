@@ -52,6 +52,7 @@ function scrollToAnchor(event) {
 }
 
 // EVENTS
+navbar.addEventListener("click", scrollToAnchor);
 
 // Build Menu
 buildNav(); // Calls function
