@@ -1,4 +1,4 @@
-// Define Global Variables
+// GLOBAL VARIABLES
 const navbar = document.querySelector("#navbar__list"); // ul element
 const sections = document.querySelectorAll('section'); // array of sections
 
