@@ -20,12 +20,10 @@ function buildNav() {
         navElement.textContent = navSelection; // adds data-nav attribute to the nav
         
         // LINK NAV WITH SECTIONS
-        // navElement.dataset["section_id"] = sections[i].id;
         navElement.dataset["section_id"] = navSection.id; // li elements linked with section ids
-
-        // EVENT
-        navElement.addEventListener("click", scrollToAnchor); // ! creates 4 event listeners
     }
+    // EVENT LISTENER
+    navbar.addEventListener("click", scrollToAnchor); // 1 event listener for all li elements
 }
 
 // Add class 'active' to section when near top of viewport
@@ -58,7 +56,6 @@ function scrollToAnchor(event) {
 }
 
 // EVENTS
-// navbar.addEventListener("click", scrollToAnchor);
 
 // Build Menu
 buildNav(); // Calls function
