@@ -8,17 +8,23 @@ const sections = document.querySelectorAll('section'); // array of sections
 // BUILD NAV
 function buildNav() {
     for (let i = 0; i < sections.length; i++) { // loops over length of array of sections
+        // FILL NAV WITH LIST ELEMENTS DYNAMICALLY
         let navElement = document.createElement("li"); // creates a list element for each section itterated over
         navElement.classList.add("menu__link"); // adds a class to each list element
         navbar.appendChild(navElement); // adds list elements to the nav
 
+        // ADD SECTION TITLES AS NAV OPTIONS DYNAMICALLY
         let navSection = sections[i]; // selects a section out of the sections array
         let navSelection = navSection.dataset.nav; // identifies each data-nav attribute in each section with dataset.nav
         console.log("navSelection " + navSelection); // prints sections in console to test if things are working
         navElement.textContent = navSelection; // adds data-nav attribute to the nav
         
+        // LINK NAV WITH SECTIONS
         // navElement.dataset["section_id"] = sections[i].id;
-        navElement.addEventListener("click", scrollToAnchor);
+        navElement.dataset["section_id"] = navSection.id; // li elements linked with section ids
+
+        // EVENT
+        navElement.addEventListener("click", scrollToAnchor); // ! creates 4 event listeners
     }
 }
 
@@ -52,7 +58,7 @@ function scrollToAnchor(event) {
 }
 
 // EVENTS
-navbar.addEventListener("click", scrollToAnchor);
+// navbar.addEventListener("click", scrollToAnchor);
 
 // Build Menu
 buildNav(); // Calls function
