@@ -75,7 +75,7 @@ section {
 }
 
 .navbar__menu .menu__link {
-    display: block;
+    display: inline-block;
     padding: 1em;
     font-weight: bold;
     text-decoration: none;
