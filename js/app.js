@@ -42,8 +42,6 @@ function onScrollListener() {
     activeSection.classList.add("your-active-class");
 }
 
-document.addEventListener("scroll", onScrollListener);
-
 // Scroll to anchor ID using scrollTO event
 function scrollToAnchor(event) {
     event.preventDefault();
@@ -58,8 +56,9 @@ function scrollToAnchor(event) {
 // EVENTS
 
 // Build Menu
-buildNav(); // Calls function
+buildNav(); // calls function
 
 // Scroll to section on link click
+document.addEventListener("scroll", onScrollListener);
 
 // Set sections as active
