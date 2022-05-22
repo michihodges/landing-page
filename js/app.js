@@ -22,8 +22,6 @@ function buildNav() {
         // LINK NAV WITH SECTIONS
         navElement.dataset["section_id"] = navSection.id; // li elements linked with section ids
     }
-    // EVENT LISTENER
-    navbar.addEventListener("click", scrollToAnchor); // 1 event listener for all li elements
 }
 
 // Add class 'active' to section when near top of viewport
@@ -52,9 +50,10 @@ function scrollToAnchor(event) {
 // EVENTS
 
 // Build Menu
-buildNav(); // calls function
+buildNav();
 
 // Scroll to section on link click
+navbar.addEventListener("click", scrollToAnchor); // 1 event listener for all li elements
 
 // Set sections as active
 document.addEventListener("scroll", makeActive);
