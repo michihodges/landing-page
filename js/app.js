@@ -27,19 +27,15 @@ function buildNav() {
 }
 
 // Add class 'active' to section when near top of viewport
-function onScrollListener() {
-    let maxHeight = 0;
-    let activeSection = sections[0];
-    sections.forEach((section) => {
-        section.classList.remove("your-active-class");
-        let rect = section.getBoundingClientRect();
-        let inside = Math.max(Math.min(rect.bottom,window.innerHeight) - Math.max(rect.top, 0), 0);
-        if (inside > maxHeight) {
-            maxHeight = inside;
-            activeSection = section;
+function makeActive() {
+    for (const section of sections) {
+        const box = section.getBoundingClientRect();
+        if (box.top <= 150 && box.bottom >= 150) {
+            section.classList.add("your-active-class");
+        } else {
+            section.classList.remove("your-active-class")
         }
-    })
-    activeSection.classList.add("your-active-class");
+    }
 }
 
 // Scroll to anchor ID using scrollTO event
@@ -59,6 +55,6 @@ function scrollToAnchor(event) {
 buildNav(); // calls function
 
 // Scroll to section on link click
-document.addEventListener("scroll", onScrollListener);
 
 // Set sections as active
+document.addEventListener("scroll", makeActive);
