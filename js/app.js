@@ -25,12 +25,12 @@
 
     // Add class 'active' to section when near top of viewport
     const makeActive = () => {
-        for (const section of sections) {
+        for (const section of sections) { // a really nice way to loop over things
             const box = section.getBoundingClientRect();
-            if (box.top <= 150 && box.bottom >= 150) {
-                section.classList.add("your-active-class");
+            if (box.top <= 150 && box.bottom >= 150) { // sets when active class is set
+                section.classList.add("your-active-class"); // adds active class
             } else {
-                section.classList.remove("your-active-class");
+                section.classList.remove("your-active-class"); // otherwise removes active class
             }
         }
     }
@@ -38,16 +38,16 @@
     // Scroll to anchor ID using scrollTO event
     const scrollToAnchor = e => {
         e.preventDefault();
-        let section = document.querySelector(`#${e.target.dataset.section_id}`);
-        section.scrollIntoView({behavior: "smooth"});
+        let section = document.querySelector(`#${e.target.dataset.section_id}`); // targets each section id to scroll to
+        section.scrollIntoView({behavior: "smooth"}); // method that initiates smooth scrolling
     }
 
     // Build Menu
-    buildNav();
+    buildNav(); // calls function
 
     // Scroll to section on link click
     navbar.addEventListener("click", scrollToAnchor); // 1 event listener for all li elements
 
     // Set sections as active
-    document.addEventListener("scroll", makeActive);
+    document.addEventListener("scroll", makeActive); // listens for when to switch active class
 })();
