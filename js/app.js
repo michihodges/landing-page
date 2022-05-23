@@ -1,11 +1,11 @@
-// GLOBAL VARIABLES
+// Global Variables
 const navbar = document.querySelector("#navbar__list"); // ul element
 const sections = document.querySelectorAll('section'); // array of sections
 
 // Helper Functions
 
-// MAIN FUNCTIONS
-// BUILD NAV
+// Main Functions
+// Build Nav
 function buildNav() {
     for (let i = 0; i < sections.length; i++) { // loops over length of array of sections
         // FILL NAV WITH LIST ELEMENTS DYNAMICALLY
