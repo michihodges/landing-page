@@ -37,6 +37,7 @@ function makeActive() {
 }
 
 // Scroll to anchor ID using scrollTO event
+/*
 function scrollToAnchor(event) {
     event.preventDefault();
     let section = document.querySelector(`#${event.target.dataset.section_id}`);
@@ -45,6 +46,13 @@ function scrollToAnchor(event) {
         left: section.offsetLeft,
         behavior: 'smooth'
     })
+}
+*/
+
+function scrollToAnchor(e) {
+    e.preventDefault();
+    let section = document.querySelector(`#${e.target.dataset.section_id}`);
+    section.scrollIntoView({behavior: "smooth"});
 }
 
 // Events
