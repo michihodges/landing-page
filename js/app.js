@@ -31,7 +31,7 @@ function makeActive() {
         if (box.top <= 150 && box.bottom >= 150) {
             section.classList.add("your-active-class");
         } else {
-            section.classList.remove("your-active-class")
+            section.classList.remove("your-active-class");
         }
     }
 }
@@ -44,10 +44,10 @@ function scrollToAnchor(event) {
         top: section.offsetTop,
         left: section.offsetLeft,
         behavior: 'smooth'
-    });
+    })
 }
 
-// EVENTS
+// Events
 
 // Build Menu
 buildNav();
