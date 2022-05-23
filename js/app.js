@@ -37,7 +37,6 @@
 
     // Scroll to anchor ID using scrollTO event
     const scrollToAnchor = e => {
-        e.preventDefault();
         let section = document.querySelector(`#${e.target.dataset.section_id}`); // targets each section id to scroll to
         section.scrollIntoView({behavior: "smooth"}); // method that initiates smooth scrolling
     }
