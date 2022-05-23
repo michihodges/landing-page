@@ -1,11 +1,11 @@
-(function () {
+(() => {
     // Global Variables
     const navbar = document.querySelector("#navbar__list"); // ul element
     const sections = document.querySelectorAll('section'); // array of sections
 
     // Main Functions
     // Build Nav
-    function buildNav() {
+    const buildNav = () => {
         for (let i = 0; i < sections.length; i++) { // loops over length of array of sections
             // Fill nav with li elements dynamically
             let navElement = document.createElement("li"); // creates a list element for each section itterated over
@@ -24,7 +24,7 @@
     }
 
     // Add class 'active' to section when near top of viewport
-    function makeActive() {
+    const makeActive = () => {
         for (const section of sections) {
             const box = section.getBoundingClientRect();
             if (box.top <= 150 && box.bottom >= 150) {
@@ -36,7 +36,7 @@
     }
 
     // Scroll to anchor ID using scrollTO event
-    function scrollToAnchor(e) {
+    const scrollToAnchor = e => {
         e.preventDefault();
         let section = document.querySelector(`#${e.target.dataset.section_id}`);
         section.scrollIntoView({behavior: "smooth"});
