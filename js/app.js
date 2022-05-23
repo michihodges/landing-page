@@ -3,8 +3,6 @@
     const navbar = document.querySelector("#navbar__list"); // ul element
     const sections = document.querySelectorAll('section'); // array of sections
 
-    // Helper Functions
-
     // Main Functions
     // Build Nav
     function buildNav() {
@@ -43,8 +41,6 @@
         let section = document.querySelector(`#${e.target.dataset.section_id}`);
         section.scrollIntoView({behavior: "smooth"});
     }
-
-    // Events
 
     // Build Menu
     buildNav();
